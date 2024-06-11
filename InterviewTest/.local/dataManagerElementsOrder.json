@@ -1,0 +1,71 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dtTable&Sequence_1",
+        "items&Sequence_2",
+        "headers&Sequence_1",
+        "str&Sequence_1",
+        "browser&Sequence_1",
+        "url&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "workflow/InitDataSource.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "begin&Sequence_4",
+        "valueBegin&Sequence_2",
+        "str&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_dtTable",
+        "in_browser"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "workflow/ExtractData.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "found&Sequence_1",
+        "dt_Array&Sequence_2",
+        "str&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "io_dtTable",
+        "in_Browser",
+        "in_SoBaoDanh"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "workflow/NotFounData.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Browser",
+        "out_found"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}
