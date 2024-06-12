@@ -144,7 +144,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <If Condition="[not found and (in_limit &lt;&gt; &quot;all&quot; and in_SoBaoDanh &lt; (230000 + cint(in_limit)) or in_limit = &quot;all&quot;)]" sap:VirtualizedContainerService.HintSize="606,1802" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[not found and (in_limit &lt;&gt; &quot;all&quot; and in_SoBaoDanh &lt;= (230000 + cint(in_limit)) or in_limit = &quot;all&quot;)]" sap:VirtualizedContainerService.HintSize="606,1802" sap2010:WorkflowViewState.IdRef="If_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>

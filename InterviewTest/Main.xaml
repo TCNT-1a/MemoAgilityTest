@@ -113,7 +113,7 @@
       <Variable x:TypeArguments="s:String[]" Name="headers" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtTable" />
       <Variable x:TypeArguments="x:Object" Name="SBD" />
-      <Variable x:TypeArguments="x:String" Name="limit" />
+      <Variable x:TypeArguments="x:Object" Name="limit" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -139,7 +139,7 @@
             </ui:ExcelReadCell>
             <ui:ExcelReadCell Cell="B2" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="526,92" sap2010:WorkflowViewState.IdRef="ExcelReadCell_2" SheetName="config">
               <ui:ExcelReadCell.Result>
-                <OutArgument x:TypeArguments="x:String">[limit]</OutArgument>
+                <OutArgument x:TypeArguments="x:Object">[limit]</OutArgument>
               </ui:ExcelReadCell.Result>
             </ui:ExcelReadCell>
             <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="526,1096" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" UiBrowser="[browser]" Url="[url]">
@@ -168,7 +168,7 @@
                         <InArgument x:TypeArguments="x:Int32" x:Key="in_SoBaoDanh">[Cint(SBD)]</InArgument>
                         <InArgument x:TypeArguments="ui:Browser" x:Key="in_Browser">[browser]</InArgument>
                         <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_dtTable">[dtTable]</InOutArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_limit">[limit]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_limit">[limit.ToString]</InArgument>
                       </ui:InvokeWorkflowFile.Arguments>
                     </ui:InvokeWorkflowFile>
                     <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="450,318" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="data-source">
