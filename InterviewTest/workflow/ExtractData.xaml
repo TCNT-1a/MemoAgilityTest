@@ -3,11 +3,12 @@
     <x:Property Name="in_SoBaoDanh" Type="InArgument(x:Int32)" />
     <x:Property Name="in_Browser" Type="InArgument(ui:Browser)" />
     <x:Property Name="io_dtTable" Type="InOutArgument(sd:DataTable)" />
+    <x:Property Name="in_limit" Type="InArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1125,2138</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1125,2514</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ExtractData_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -107,7 +108,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ExtractData" sap:VirtualizedContainerService.HintSize="648,2073" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ExtractData" sap:VirtualizedContainerService.HintSize="648,2449" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str" />
       <Variable x:TypeArguments="x:Boolean" Name="found" />
@@ -123,7 +124,27 @@
         <InArgument x:TypeArguments="ui:Browser" x:Key="in_Browser">[in_Browser]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <If Condition="[not found and in_SoBaoDanh&lt; 230005]" sap:VirtualizedContainerService.HintSize="606,1802" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[in_limit.ToLower =&quot;all&quot;]" sap:VirtualizedContainerService.HintSize="606,376" sap2010:WorkflowViewState.IdRef="If_2">
+      <If.Then>
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,103" sap2010:WorkflowViewState.IdRef="Sequence_7">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,103" sap2010:WorkflowViewState.IdRef="Sequence_8">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </If.Else>
+    </If>
+    <If Condition="[not found and (in_limit &lt;&gt; &quot;all&quot; and in_SoBaoDanh &lt; (230000 + cint(in_limit)) or in_limit = &quot;all&quot;)]" sap:VirtualizedContainerService.HintSize="606,1802" sap2010:WorkflowViewState.IdRef="If_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -193,7 +214,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:AnchorBase>
-                  <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="434,122" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                  <Delay Duration="00:00:01.0100000" sap:VirtualizedContainerService.HintSize="434,122" sap2010:WorkflowViewState.IdRef="Delay_1" />
                   <ui:InjectJsScript InputParameter="{x:Null}" DisplayName="Inject Js Script" sap:VirtualizedContainerService.HintSize="434,167" sap2010:WorkflowViewState.IdRef="InjectJsScript_1" ScriptCode="function(e,i){return Array.from(document.querySelectorAll('.centerColsContainer .cell-value')).map(i=&gt;i.innerText).join('|')}">
                     <ui:InjectJsScript.ScriptOutput>
                       <OutArgument x:TypeArguments="x:String">[str]</OutArgument>
@@ -220,7 +241,7 @@
                       <OutArgument x:TypeArguments="s:String[]">[dt_Array]</OutArgument>
                     </Assign.To>
                     <Assign.Value>
-                      <InArgument x:TypeArguments="s:String[]">[str.Split("|")]</InArgument>
+                      <InArgument x:TypeArguments="s:String[]">[(str &amp; "|" &amp; cstr(in_SoBaoDanh)).Split("|")]</InArgument>
                     </Assign.Value>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -235,6 +256,7 @@
                       <InArgument x:TypeArguments="x:Int32" x:Key="in_SoBaoDanh">[in_SoBaoDanh +1]</InArgument>
                       <InArgument x:TypeArguments="ui:Browser" x:Key="in_Browser">[in_Browser]</InArgument>
                       <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_dtTable">[io_dtTable]</InOutArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_limit">[in_limit]</InArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                   </ui:InvokeWorkflowFile>
                 </Sequence>

@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1125,1498.9999999999998</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1125,1493</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>InitDataSource_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -111,38 +111,34 @@
       <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="InitDataSource" sap:VirtualizedContainerService.HintSize="676,1434" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="InitDataSource" sap:VirtualizedContainerService.HintSize="676,1428" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BrowserScope BrowserType="{x:Null}" SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[in_browser]" DisplayName="Attach Browser" sap:VirtualizedContainerService.HintSize="634,1369" sap2010:WorkflowViewState.IdRef="BrowserScope_1">
+    <ui:BrowserScope BrowserType="{x:Null}" SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[in_browser]" DisplayName="Attach Browser" sap:VirtualizedContainerService.HintSize="634,1363" sap2010:WorkflowViewState.IdRef="BrowserScope_1">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence sap:VirtualizedContainerService.HintSize="600,1237" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence sap:VirtualizedContainerService.HintSize="600,1231" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <Sequence.Variables>
-              <Variable x:TypeArguments="x:String" Name="begin">
-                <Variable.Default>
-                  <Literal x:TypeArguments="x:String">230001</Literal>
-                </Variable.Default>
-              </Variable>
+              <Variable x:TypeArguments="x:String" Default="230001" Name="begin" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:AnchorBase AnchorPosition="Top" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="558,436" sap2010:WorkflowViewState.IdRef="AnchorBase_1">
+            <ui:AnchorBase AnchorPosition="Top" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="558,435" sap2010:WorkflowViewState.IdRef="AnchorBase_1">
               <ui:AnchorBase.Action>
                 <ActivityAction x:TypeArguments="ui:Anchor">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
                   </ActivityAction.Argument>
-                  <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into 'editable text'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="[begin+ &quot;[k(enter)]&quot;]">
+                  <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into 'editable text'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,155" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="[begin+ &quot;[k(enter)]&quot;]">
                     <ui:TypeInto.Target>
                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="248c2397-50fa-4d07-980b-4402a2bce621" InformativeScreenshot="ebfc5bc60f730f198b2fbb3fae807bbd" Selector="&lt;webctrl tag='INPUT' /&gt;">
                         <ui:Target.TimeoutMS>
@@ -171,27 +167,23 @@
                 </ui:WaitUiElementAppear>
               </ui:AnchorBase.AnchorProvider>
             </ui:AnchorBase>
-            <Sequence sap:VirtualizedContainerService.HintSize="558,736" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence sap:VirtualizedContainerService.HintSize="558,731" sap2010:WorkflowViewState.IdRef="Sequence_3">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,625" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,620" sap2010:WorkflowViewState.IdRef="Sequence_2">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:String" Name="str" />
-                  <Variable x:TypeArguments="x:String" Name="valueBegin">
-                    <Variable.Default>
-                      <Literal x:TypeArguments="x:String">230001</Literal>
-                    </Variable.Default>
-                  </Variable>
+                  <Variable x:TypeArguments="x:String" Default="230001" Name="valueBegin" />
                 </Sequence.Variables>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:InjectJsScript InputParameter="{x:Null}" DisplayName="Inject Js Script" sap:VirtualizedContainerService.HintSize="434,168" sap2010:WorkflowViewState.IdRef="InjectJsScript_1" ScriptCode="function(e,i){return Array.from(document.querySelectorAll('.centerHeaderRow div.colName')).map(i=&gt;i.innerText).join(',')}">
+                <ui:InjectJsScript InputParameter="{x:Null}" DisplayName="Inject Js Script" sap:VirtualizedContainerService.HintSize="434,167" sap2010:WorkflowViewState.IdRef="InjectJsScript_1" ScriptCode="function(e,i){return Array.from(document.querySelectorAll('.centerHeaderRow div.colName')).map(i=&gt;i.innerText).join(',')}">
                   <ui:InjectJsScript.ScriptOutput>
                     <OutArgument x:TypeArguments="x:String">[str]</OutArgument>
                   </ui:InjectJsScript.ScriptOutput>
@@ -206,8 +198,8 @@
                     </ui:Target>
                   </ui:InjectJsScript.Target>
                 </ui:InjectJsScript>
-                <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" Encoding="utf-8" FileName="temp\header.csv" sap:VirtualizedContainerService.HintSize="434,167" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[str]" />
-                <ui:ReadCsvFile PathResource="{x:Null}" DataTable="[out_dtTable]" Delimitator="Comma" DelimitatorForViewModel="Comma" DisplayName="Read CSV" FilePath="temp\header.csv" sap:VirtualizedContainerService.HintSize="434,179" sap2010:WorkflowViewState.IdRef="ReadCsvFile_1" />
+                <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" Encoding="utf-8" FileName="temp\header.csv" sap:VirtualizedContainerService.HintSize="434,165" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[str+&quot;,SBD&quot;]" />
+                <ui:ReadCsvFile PathResource="{x:Null}" DataTable="[out_dtTable]" Delimitator="Comma" DelimitatorForViewModel="Comma" DisplayName="Read CSV" FilePath="temp\header.csv" sap:VirtualizedContainerService.HintSize="434,177" sap2010:WorkflowViewState.IdRef="ReadCsvFile_1" />
               </Sequence>
             </Sequence>
           </Sequence>
