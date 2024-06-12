@@ -10,7 +10,7 @@ https://lookerstudio.google.com/u/0/reporting/6a99f06c-f0a9-4aa8-8d68-058b1afdb6
 
 ## 1 Cài đặt môi trường
 
-- Phiên bản Bot được phát triển ở phiên bản 2024.10.0
+- Phiên bản Bot được phát triển ở phiên bản UiPath 2024.10.0
 
 ![alt](uipath.png)
 - Máy tính cần cài đặt Uipath, Google chrome, và Microsoft Office Excel.
