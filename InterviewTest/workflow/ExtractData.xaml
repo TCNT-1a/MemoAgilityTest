@@ -8,7 +8,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1125,2514</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1125,2718</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ExtractData_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -108,10 +108,11 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ExtractData" sap:VirtualizedContainerService.HintSize="648,2449" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ExtractData" sap:VirtualizedContainerService.HintSize="648,2653" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str" />
       <Variable x:TypeArguments="x:Boolean" Name="found" />
+      <Variable x:TypeArguments="x:Boolean" Name="condition" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -124,14 +125,30 @@
         <InArgument x:TypeArguments="ui:Browser" x:Key="in_Browser">[in_Browser]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <If Condition="[in_limit.ToLower =&quot;all&quot;]" sap:VirtualizedContainerService.HintSize="606,376" sap2010:WorkflowViewState.IdRef="If_2">
+    <Assign sap:VirtualizedContainerService.HintSize="606,114" sap2010:WorkflowViewState.IdRef="Assign_2">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:Boolean">[condition]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:Boolean">[not found]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <If Condition="[in_limit.ToLower &lt;&gt;&quot;all&quot;]" sap:VirtualizedContainerService.HintSize="606,466" sap2010:WorkflowViewState.IdRef="If_2">
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,103" sap2010:WorkflowViewState.IdRef="Sequence_7">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,193" sap2010:WorkflowViewState.IdRef="Sequence_7">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
+          <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_3">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:Boolean">[condition]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:Boolean">[condition and (in_SoBaoDanh &lt;= (230000 + cint(in_limit)) )]</InArgument>
+            </Assign.Value>
+          </Assign>
         </Sequence>
       </If.Then>
       <If.Else>
@@ -144,7 +161,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <If Condition="[not found and (in_limit &lt;&gt; &quot;all&quot; and in_SoBaoDanh &lt;= (230000 + cint(in_limit)) or in_limit = &quot;all&quot;)]" sap:VirtualizedContainerService.HintSize="606,1802" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[condition]" sap:VirtualizedContainerService.HintSize="606,1802" sap2010:WorkflowViewState.IdRef="If_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
