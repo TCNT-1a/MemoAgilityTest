@@ -1,5 +1,6 @@
 ﻿# BOT lấy dữ liệu điểm thi học sinh và tạo báo cáo.
-
+Link web
+https://lookerstudio.google.com/u/0/reporting/6a99f06c-f0a9-4aa8-8d68-058b1afdb6a5/page/cOHMD?s=pKnsq0u7hHc
 # Phần 1: Cài đặt môi trường
 
 ## 1 Cài đặt môi trường
