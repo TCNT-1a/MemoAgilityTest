@@ -18,7 +18,7 @@ https://lookerstudio.google.com/u/0/reporting/6a99f06c-f0a9-4aa8-8d68-058b1afdb6
 ## 2 Cấu trúc thư mục
 
 Một số thư mục và file quan trọng
-![alt](folder structure.png)
+![alt](folder-structure.png)
 
 - **Main.xaml** file mở Project Bot
 - **assest** là thư mục chứa macro xữ lý report và template report
