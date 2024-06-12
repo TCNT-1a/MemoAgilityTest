@@ -21,7 +21,6 @@ Một số thư mục và file quan trọng
 ![alt](folder structure.png)
 
 - **Main.xaml** file mở Project Bot
-- **output** là thư mục file đầu ra
 - **assest** là thư mục chứa macro xữ lý report và template report
 - **Macro.xlsm** là file chứa macro và cấu hình:
 
@@ -31,3 +30,9 @@ Một số thư mục và file quan trọng
 * Cấu hình benchmarks
 
   ![alt](benchmarks.png)
+
+- **output** là thư mục file đầu ra
+
+* data-source.xlsx chứa nội dung dữ liệu
+* Các thư mục còn lại tương ứng số báo danh từng thí sinh
+  ![alt](output.png)
