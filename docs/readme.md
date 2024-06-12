@@ -38,3 +38,14 @@ Một số thư mục và file quan trọng
 - data-source.xlsx chứa nội dung dữ liệu
 - Các thư mục còn lại tương ứng số báo danh từng thí sinh
   ![alt](output.png)
+
+# Phần 3: Các trường hợp của report
+
+- Trường hợp thiếu thông tin
+  Thí sinh **230548**
+- Trường hợp pass
+  Thí sinh **230001**, **230009**
+- Trường hợp đủ thông tin nhưng fail
+  Thí sinh **230003**
+- Trường hợp vừa pass môn này, vừa fail môn kia
+  Thí sinh **230393**
