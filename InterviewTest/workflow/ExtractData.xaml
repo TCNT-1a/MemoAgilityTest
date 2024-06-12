@@ -214,7 +214,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:AnchorBase>
-                  <Delay Duration="00:00:01.0100000" sap:VirtualizedContainerService.HintSize="434,122" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                  <Delay Duration="00:00:02.0100000" sap:VirtualizedContainerService.HintSize="434,122" sap2010:WorkflowViewState.IdRef="Delay_1" />
                   <ui:InjectJsScript InputParameter="{x:Null}" DisplayName="Inject Js Script" sap:VirtualizedContainerService.HintSize="434,167" sap2010:WorkflowViewState.IdRef="InjectJsScript_1" ScriptCode="function(e,i){return Array.from(document.querySelectorAll('.centerColsContainer .cell-value')).map(i=&gt;i.innerText).join('|')}">
                     <ui:InjectJsScript.ScriptOutput>
                       <OutArgument x:TypeArguments="x:String">[str]</OutArgument>
