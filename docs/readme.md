@@ -42,10 +42,17 @@ Một số thư mục và file quan trọng
 # Phần 3: Các trường hợp của report
 
 - Trường hợp thiếu thông tin
+
   Thí sinh **230548**
+
 - Trường hợp pass
+
   Thí sinh **230001**, **230009**
+
 - Trường hợp đủ thông tin nhưng fail
+
   Thí sinh **230003**
+
 - Trường hợp vừa pass môn này, vừa fail môn kia
+
   Thí sinh **230393**
