@@ -7,7 +7,7 @@ https://lookerstudio.google.com/u/0/reporting/6a99f06c-f0a9-4aa8-8d68-058b1afdb6
 ```
 
 Yêu cầu
-[[Requirements_update.pdf]]
+[Hướng dẫn sử dụng](/Requirements_update.pdf)
 
 # Phần 1: Cài đặt môi trường
 
@@ -16,28 +16,28 @@ Yêu cầu
 ![alt](uipath.png)
 
 - Máy tính cần cài đặt Uipath, Google chrome, và Microsoft Office Excel.
-- Nếu máy tính bạn chưa có Uipath có thể cài đặt tại đây. https://drive.google.com/drive/folders/1jj791B2Bs0fqx7Ywiw5RXewb2KWNTgKp?usp=sharing. Sau khi cài đặt xong update lên phiên bản mới nhất
+- Nếu máy tính bạn chưa có Uipath có thể cài đặt tại đây. https://drive.google.com/drive/folders/1jj791B2Bs0fqx7Ywiw5RXewb2KWNTgKp?usp=sharing. Sau khi cài đặt xong cập nhật lên phiên bản mới nhất
 
 # Phần 2: Cấu trúc thư mục
 
 Một số thư mục và file quan trọng
 ![alt](folder-structure.png)
 
-## **Main.xaml** file mở Project Bot
+## 1 _Main.xaml_ file mở Project Bot
 
-## **assest** là thư mục chứa macro xữ lý report và template report
+## 2 _assest_ là thư mục chứa macro xữ lý report và template report
 
-- **Macro.xlsm** là file chứa macro và cấu hình:
+- _Macro.xlsm_ là file chứa macro và cấu hình:
 
 - bạn có thể thay đổi config **all** thành **5** để giới hạn số lượng dữ liệu lấy về
 
   ![alt](config.png)
 
-- Cấu hình benchmarks
+- Cấu hình bảng benchmarks
 
   ![alt](benchmarks.png)
 
-## **output** là thư mục file đầu ra
+## 3 _output_ là thư mục file đầu ra
 
 - data-source.xlsx chứa nội dung dữ liệu
 - Các thư mục còn lại tương ứng số báo danh từng thí sinh
