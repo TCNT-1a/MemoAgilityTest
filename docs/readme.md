@@ -45,7 +45,7 @@ Một số thư mục và file quan trọng
 # Phần 3: Thời gian thực thi
 
 - Tuỳ điều kiện cấu hình máy tính thời gian thực thi sẽ khác nhau.
-- Test thực tế trên máy tính laptop cá nhân bao gồm việc lấy dữ liệu của hơn 500 thí sinh và xuất report là hơn 30p (kết quả này chỉ tham khảo)
+- Test thực tế trên máy tính laptop cá nhân bao gồm việc lấy dữ liệu của hơn 500 thí sinh và xuất report là hơn 30p (thời gian thực thi này chỉ tham khảo)
   ![alt](time.png)
 
 # Phần 4: Các lưu ý khi chạy bot
