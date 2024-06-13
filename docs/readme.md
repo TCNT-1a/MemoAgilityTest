@@ -6,6 +6,9 @@ Link web
 https://lookerstudio.google.com/u/0/reporting/6a99f06c-f0a9-4aa8-8d68-058b1afdb6a5/page/cOHMD?s=pKnsq0u7hHc
 ```
 
+Yêu cầu
+[[Requirements_update.pdf]]
+
 # Phần 1: Cài đặt môi trường
 
 - Phiên bản Bot được phát triển ở phiên bản UiPath 2024.10.0
@@ -13,6 +16,7 @@ https://lookerstudio.google.com/u/0/reporting/6a99f06c-f0a9-4aa8-8d68-058b1afdb6
 ![alt](uipath.png)
 
 - Máy tính cần cài đặt Uipath, Google chrome, và Microsoft Office Excel.
+- Nếu máy tính bạn chưa có Uipath có thể cài đặt tại đây. https://drive.google.com/drive/folders/1jj791B2Bs0fqx7Ywiw5RXewb2KWNTgKp?usp=sharing. Sau khi cài đặt xong update lên phiên bản mới nhất
 
 # Phần 2: Cấu trúc thư mục
 
@@ -39,7 +43,20 @@ Một số thư mục và file quan trọng
 - Các thư mục còn lại tương ứng số báo danh từng thí sinh
   ![alt](output.png)
 
-# Phần 3: Các trường hợp của report
+# Phần 3: Thời gian thực thi
+
+- Tuỳ điều kiện cấu hình máy tính thời gian thực thi sẽ khác nhau.
+- Test thực tế trên máy tính laptop cá nhân bao gồm việc lấy dữ liệu của hơn 500 thí sinh và xuất report là hơn 30p (kết quả này chỉ tham khảo)
+  ![alt](time.png)
+
+# Phần 4: Các lưu ý khi chạy bot
+
+- Đóng hết các cửa sổ trình duyệt và excel
+- Bên trong thư mục **output** phải rổng
+- Trong lúc chạy bot không thao tác với máy tính
+- Khi nhập xong đến page cuối, có một khoảng thời gian thấy bot đứng yên, lúc đó bot đang xuất report.
+
+# Phần 5: Một vài trường hợp của report kết quả
 
 - Trường hợp thiếu thông tin
 

@@ -4,6 +4,7 @@
     <x:Property Name="in_Browser" Type="InArgument(ui:Browser)" />
     <x:Property Name="io_dtTable" Type="InOutArgument(sd:DataTable)" />
     <x:Property Name="in_limit" Type="InArgument(x:String)" />
+    <x:Property Name="in_SbdBegin" Type="InArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
@@ -146,7 +147,7 @@
               <OutArgument x:TypeArguments="x:Boolean">[condition]</OutArgument>
             </Assign.To>
             <Assign.Value>
-              <InArgument x:TypeArguments="x:Boolean">[condition and (in_SoBaoDanh &lt;= (230000 + cint(in_limit)) )]</InArgument>
+              <InArgument x:TypeArguments="x:Boolean">[condition and (in_SoBaoDanh &lt;= (cint(in_SbdBegin) -1 + cint(in_limit)) )]</InArgument>
             </Assign.Value>
           </Assign>
         </Sequence>
@@ -274,6 +275,7 @@
                       <InArgument x:TypeArguments="ui:Browser" x:Key="in_Browser">[in_Browser]</InArgument>
                       <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_dtTable">[io_dtTable]</InOutArgument>
                       <InArgument x:TypeArguments="x:String" x:Key="in_limit">[in_limit]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_SbdBegin">[in_SbdBegin]</InArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                   </ui:InvokeWorkflowFile>
                 </Sequence>
