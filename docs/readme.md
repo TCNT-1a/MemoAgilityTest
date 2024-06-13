@@ -6,8 +6,7 @@ Link web
 https://lookerstudio.google.com/u/0/reporting/6a99f06c-f0a9-4aa8-8d68-058b1afdb6a5/page/cOHMD?s=pKnsq0u7hHc
 ```
 
-Yêu cầu
-[Hướng dẫn sử dụng](/Requirements_update.pdf)
+[Yêu cầu đề bài](/docs//Requirements_update.pdf)
 
 # Phần 1: Cài đặt môi trường
 
