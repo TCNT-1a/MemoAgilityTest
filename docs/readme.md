@@ -50,7 +50,7 @@ Một số thư mục và file quan trọng
   ![alt](time.png)
 
 # Phần 4: Các lưu ý khi chạy bot
-- Cài extension Uipath cho google.
+- Cài extension Uipath cho google chrome.
 - Đóng hết các cửa sổ trình duyệt và excel
 - Bên trong thư mục **output** phải rổng
 - Trong lúc chạy bot không thao tác với máy tính
